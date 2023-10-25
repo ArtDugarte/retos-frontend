@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --verde_oscuro: hsl(158, 36%, 37%);
+  --verde_hover: hsl(158, 36%, 25%);
+  --crema: hsl(30, 38%, 92%);
+  --azul_oscuro: hsl(212, 21%, 14%);
+  --azul_claro: hsl(228, 12%, 48%);
+  --blanco: hsl(0, 0%, 100%);
+  --monzserrat: 'Montserrat', sans-serif;
+  --fraunces: 'Fraunces', serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--crema);
+  font-size: 14px;
+}
+
+.contenedor {
+  background-color: var(--blanco);
+  border-radius: 10px;
+  margin: 0 auto;
+  width: min(92%, 600px);
+}
+
+.imagen {
+  display: flex;
+}
+
+.imagen img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.imagen img.escritorio {
+  display: none;
+}
+
+.contenido {
+  margin: 0 20px;
+}
+
+.categoria {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--azul_claro);
+  font-family: var(--monzserrat);
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.titulo {
+  font-family: var(--fraunces);
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--azul_oscuro);
+  margin-top: 15px;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.descripcion {
+  color: var(--azul_claro);
+  font-family: var(--monzserrat);
+  margin-top: 20px;
+  line-height: 1.6;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+.precios {
+  display: flex;
+  margin-top: 30px;
+  gap: 20px;
+  align-items: center;
+}
+
+.precio {
+  font-family: var(--fraunces);
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--verde_oscuro);
+}
+
+.oferta {
+  font-family: var(--monzserrat);
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--azul_claro);
+  text-decoration: line-through;
+}
+
+.boton {
+  background-color: var(--verde_oscuro);
+  color: var(--blanco);
+  font-family: var(--monzserrat);
+  font-weight: 700;
+  font-size: 14px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.boton:hover {
+  background-color: var(--verde_hover);
+}
+
+@media screen and (min-width: 768px) {
+  
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    margin: 10px auto;
+  }
+
+  .imagen img {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .imagen img.movil {
+    display: none;
+  }
+
+  .imagen img.escritorio {
+    display: block;
+    border-radius: none;
+  }
+
+  .contenido {
+    margin: 10px 30px;
+  }
+
+  .boton {
+    margin: 30px 0 20px;
+  }
+}
+
+
