@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --fuente: 'Red Hat Display', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: var(--fuente);
+  background-image: url('../images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--pale-blue);
+}
+
+@media (min-width: 600px) {
+  body {
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.contenedor {
+  width: min(90%, 375px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto;
+  border-radius: 20px;
+  background-color: var(--very-pale-blue);
+  overflow: hidden;
+}
+
+.img {
+  background-color: var(--very-pale-blue);
+  border-radius: 15px 15px 0 0;
+}
+
+.contenido {
+  padding: 20px 30px;
+}
+
+h1 {
+  color: var(--dark-blue);
+  font-size: 23px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.parrafo {
+  color: var(--desaturated-blue);
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.6;
+  margin: 20px 0 40px;
+}
+
+.contenedor_plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.nota_musical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nota_musical img {
+  width: 100%;
+}
+
+.plan{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.plan_anual {
+  color: var(--dark-blue);
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.plan_costo {
+  color: var(--desaturated-blue);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.enlace {
+  color: var(--bright-blue);
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enlace:hover a {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+button {
+  display: block;
+}
+
+.pagar {
+  background-color: var(--bright-blue);
+  color: var(--very-pale-blue);
+  border: none;
+  border-radius: 12px;
+  padding: 15px 0;
+  margin: 40px 0 10px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 15px 20px 0 hsla(245, 75%, 52%, .25);
+}
+
+.pagar:hover {
+  opacity: 0.8;
+}
+
+.cancelar {
+  color: var(--desaturated-blue);
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 15px 0;
+}
+
+.cancelar:hover {
+  color: var(--dark-blue);
+}
